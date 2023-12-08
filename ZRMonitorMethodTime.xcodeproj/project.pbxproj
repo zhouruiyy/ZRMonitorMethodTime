@@ -14,6 +14,9 @@
 		F0860B522B21EBA20023FA0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0860B512B21EBA20023FA0E /* Assets.xcassets */; };
 		F0860B552B21EBA20023FA0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0860B532B21EBA20023FA0E /* LaunchScreen.storyboard */; };
 		F0860B582B21EBA20023FA0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0860B572B21EBA20023FA0E /* main.m */; };
+		F0860B612B21EBEE0023FA0E /* UIViewController+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = F0860B602B21EBEE0023FA0E /* UIViewController+Common.m */; };
+		F0860B642B21EEFB0023FA0E /* BSBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F0860B622B21EEFB0023FA0E /* BSBacktraceLogger.m */; };
+		F0860B672B21F0170023FA0E /* ZRMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = F0860B662B21F0170023FA0E /* ZRMonitor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,12 @@
 		F0860B542B21EBA20023FA0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0860B562B21EBA20023FA0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0860B572B21EBA20023FA0E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F0860B5F2B21EBEE0023FA0E /* UIViewController+Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Common.h"; sourceTree = "<group>"; };
+		F0860B602B21EBEE0023FA0E /* UIViewController+Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Common.m"; sourceTree = "<group>"; };
+		F0860B622B21EEFB0023FA0E /* BSBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBacktraceLogger.m; sourceTree = "<group>"; };
+		F0860B632B21EEFB0023FA0E /* BSBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBacktraceLogger.h; sourceTree = "<group>"; };
+		F0860B652B21F0170023FA0E /* ZRMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRMonitor.h; sourceTree = "<group>"; };
+		F0860B662B21F0170023FA0E /* ZRMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRMonitor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +70,15 @@
 		F0860B442B21EBA10023FA0E /* ZRMonitorMethodTime */ = {
 			isa = PBXGroup;
 			children = (
+				F0860B5E2B21EBC90023FA0E /* ZRMonitor */,
 				F0860B452B21EBA10023FA0E /* AppDelegate.h */,
 				F0860B462B21EBA10023FA0E /* AppDelegate.m */,
 				F0860B482B21EBA10023FA0E /* SceneDelegate.h */,
 				F0860B492B21EBA10023FA0E /* SceneDelegate.m */,
 				F0860B4B2B21EBA10023FA0E /* ViewController.h */,
 				F0860B4C2B21EBA10023FA0E /* ViewController.m */,
+				F0860B5F2B21EBEE0023FA0E /* UIViewController+Common.h */,
+				F0860B602B21EBEE0023FA0E /* UIViewController+Common.m */,
 				F0860B4E2B21EBA10023FA0E /* Main.storyboard */,
 				F0860B512B21EBA20023FA0E /* Assets.xcassets */,
 				F0860B532B21EBA20023FA0E /* LaunchScreen.storyboard */,
@@ -74,6 +86,17 @@
 				F0860B572B21EBA20023FA0E /* main.m */,
 			);
 			path = ZRMonitorMethodTime;
+			sourceTree = "<group>";
+		};
+		F0860B5E2B21EBC90023FA0E /* ZRMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				F0860B632B21EEFB0023FA0E /* BSBacktraceLogger.h */,
+				F0860B622B21EEFB0023FA0E /* BSBacktraceLogger.m */,
+				F0860B652B21F0170023FA0E /* ZRMonitor.h */,
+				F0860B662B21F0170023FA0E /* ZRMonitor.m */,
+			);
+			path = ZRMonitor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +172,9 @@
 				F0860B4D2B21EBA10023FA0E /* ViewController.m in Sources */,
 				F0860B472B21EBA10023FA0E /* AppDelegate.m in Sources */,
 				F0860B582B21EBA20023FA0E /* main.m in Sources */,
+				F0860B672B21F0170023FA0E /* ZRMonitor.m in Sources */,
+				F0860B642B21EEFB0023FA0E /* BSBacktraceLogger.m in Sources */,
+				F0860B612B21EBEE0023FA0E /* UIViewController+Common.m in Sources */,
 				F0860B4A2B21EBA10023FA0E /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +326,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -327,6 +354,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
